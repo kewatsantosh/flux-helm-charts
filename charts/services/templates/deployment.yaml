@@ -20,7 +20,7 @@ spec:
       {{- end }}
       labels:
         {{- include "services.selectorLabels" . | nindent 8 }}
-        timestamp: {{ now | quote }}
+        timestamp: {{ now | date "20060102150405" | quote }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
