@@ -2,8 +2,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: migrate-dbs
-  labels:
-    {{ $.Chart.Name }}
 spec:
   template:
     spec:
