@@ -18,9 +18,9 @@ spec:
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      timestamp: {{ now | quote }}
       labels:
         {{- include "services.selectorLabels" . | nindent 8 }}
+        timestamp: {{ now | quote }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
