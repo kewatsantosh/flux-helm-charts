@@ -4,7 +4,7 @@ metadata:
   name: {{ include "services.fullname" . }}
   labels:
     {{- include "services.labels" . | nindent 4 }}
-    my.label: {{ .Chart.Version }}
+    # my.label: {{ .Chart.Version }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

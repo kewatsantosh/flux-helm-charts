@@ -40,7 +40,7 @@ helm.sh/chart: {{ include "services.chart" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-app.custom.version: {{ .Chart.Version }}
+# app.custom.version: {{ .Chart.Version }}
 app.custom.time: {{ now | date "20060102150405" }}
 {{- end }}
 
