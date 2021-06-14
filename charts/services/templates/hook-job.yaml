@@ -15,4 +15,4 @@ spec:
         - name: migrate-dbs
           image: "busybox"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sh", "-c", "echo Start; sleep 10; echo End"]
+          command: ["/bin/sh", "-c", "echo Start; sleep 10; echo End; exit 1"]
